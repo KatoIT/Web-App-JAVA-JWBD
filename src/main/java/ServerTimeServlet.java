@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 
-@WebServlet(name = "Servlet", urlPatterns = "/index")
-public class Servlet extends HttpServlet {
+@WebServlet(name = "ServerTimeServlet", urlPatterns = "/time")
+public class ServerTimeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter writer = response.getWriter();

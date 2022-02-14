@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: nguye
@@ -18,7 +19,7 @@
     </c:if>
 </p>
 <p>
-    <a href="/customers">Back to customer list</a>
+    <a href="<c:url value="/customers"/>">Back to customer list</a>
 </p>
 <form method="post">
     <fieldset>

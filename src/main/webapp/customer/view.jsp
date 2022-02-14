@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: nguye
@@ -13,7 +14,7 @@
 <body>
 <h1>Customer details</h1>
 <p>
-    <a href="/customers">Back to customer list</a>
+    <a href="<c:url value="/customers"/>">Back to customer list</a>
 </p>
 <table>
     <tr>

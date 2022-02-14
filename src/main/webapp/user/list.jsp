@@ -31,7 +31,7 @@
 <div align="center">
     <table border="1" cellpadding="5">
         <caption><h2>List of Users</h2></caption>
-        <span><a href="<c:url value="/users?action=sort"/>"><Sort></Sort></a></span>
+        <p><a href="<c:url value="/users?action=sort"/>">Sort</a></p>
         <tr>
             <th>ID</th>
             <th>Name</th>

@@ -50,6 +50,9 @@ public class UserServlet extends HttpServlet {
                 case "edit" -> showEditForm(request, response);
                 case "delete" -> deleteUser(request, response);
                 case "sort" -> sortUser(request, response);
+                case "permision" -> addUserPermision(request, response);
+                case "test-use-tran" -> testUseTran(request, response);
+                case "test-without-tran" -> testWithoutTran(request, response);
                 default -> listUser(request, response);
             }
         } catch (SQLException ex) {
@@ -136,5 +139,19 @@ public class UserServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
+    private void addUserPermision(HttpServletRequest request, HttpServletResponse response) {
+        User user = new User("quan", "quan.nguyen@codegym.vn", "vn");
+        int[] permision = {1, 2, 4};
+        userDAO.addUserTransaction(user, permision);
+    }
 
+    private void testWithoutTran(HttpServletRequest request, HttpServletResponse response) {
+        userDAO.insertUpdateWithoutTransaction();
+    }
+
+    private void testUseTran(HttpServletRequest request, HttpServletResponse response) {
+
+        userDAO.insertUpdateUseTransaction();
+
+    }
 }
